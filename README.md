@@ -13,6 +13,11 @@ This lab retires a self-managed database VM and replaces it with Azure SQL Datab
 
 ## What You Will Build
 
+![Lab 03 architecture: vm-web-01 uses its managed identity to get a token, reads the SQL password from Key Vault, and connects to Azure SQL](assets/architecture.svg)
+
+<details>
+<summary>Text version of the diagram</summary>
+
 ```
  rg-lab02-giovanni (East US)                  rg-lab03-giovanni (West US 3)
 +-----------------------------+              +-----------------------------------+
@@ -32,6 +37,8 @@ This lab retires a self-managed database VM and replaces it with Azure SQL Datab
                                               Azure Monitor Metrics
                                               CPU % + Successful Connections
 ```
+
+</details>
 
 ## Skills You Will Practice
 
@@ -148,6 +155,8 @@ Azure-PaaS-Key-Vault-Secrets-Lab/
 ├── .gitignore                    Keeps keys, secrets, and state files out of Git
 ├── set-vars.ps1                  All lab variables in one place, prints them on load
 ├── assets/
+│   ├── architecture.svg          Animated architecture diagram (shown in this README)
+│   ├── architecture.png          Static PNG copy for LinkedIn or slides
 │   ├── screenshots/              Proof screenshots from the completed build
 │   │   ├── 01-vm-install-azure-cli.png
 │   │   ├── 02-sqlcmd-end-to-end-success.png
