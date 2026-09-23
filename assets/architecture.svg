@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07122b"/><stop offset="1" stop-color="#0b2a55"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#132b52"/><stop offset="1" stop-color="#0d1f3d"/></linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4cc2ff"/></marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ffa53d"/></marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3fd68a"/></marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c792ff"/></marker>
+  </defs>
+  <style>
+    .flow{stroke-dasharray:10 8;animation:dash 1.2s linear infinite}
+    @keyframes dash{to{stroke-dashoffset:-36}}
+    .pulse{animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+  </style>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <g stroke="#1b3d73" stroke-opacity="0.35">
+    <line x1="0" y1="180" x2="1200" y2="180"/><line x1="0" y1="360" x2="1200" y2="360"/><line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="300" y1="0" x2="300" y2="720"/><line x1="600" y1="0" x2="600" y2="720"/><line x1="900" y1="0" x2="900" y2="720"/>
+  </g>
+
+  <!-- Title -->
+  <text x="40" y="52" fill="#ffffff" font-size="28" font-weight="bold">CEA Lab 03  |  Passwordless Access to Azure SQL</text>
+  <text x="40" y="80" fill="#8fb4e3" font-size="16">Managed Identity  +  Key Vault (RBAC)  +  Azure SQL Database (PaaS)  +  Azure Monitor</text>
+
+  <!-- Left resource group -->
+  <rect x="30" y="110" width="370" height="530" rx="16" fill="none" stroke="#4cc2ff" stroke-opacity="0.5" stroke-dasharray="6 6"/>
+  <rect x="50" y="98" width="250" height="26" rx="13" fill="#0b2a55" stroke="#4cc2ff" stroke-opacity="0.6"/>
+  <text x="175" y="116" fill="#4cc2ff" font-size="14" font-weight="bold" text-anchor="middle">rg-lab02-giovanni  |  East US</text>
+
+  <!-- vm-web-01 -->
+  <rect x="60" y="150" width="310" height="230" rx="14" fill="url(#card)" stroke="#4cc2ff" stroke-width="2"/>
+  <g transform="translate(85,175)">
+    <rect width="54" height="16" rx="3" fill="#4cc2ff"/><rect y="21" width="54" height="16" rx="3" fill="#4cc2ff"/><rect y="42" width="54" height="16" rx="3" fill="#4cc2ff"/>
+    <circle cx="45" cy="8" r="3" fill="#07122b"/><circle cx="45" cy="29" r="3" fill="#07122b"/><circle cx="45" cy="50" r="3" fill="#07122b"/>
+  </g>
+  <text x="160" y="195" fill="#fff" font-size="22" font-weight="bold">vm-web-01</text>
+  <text x="160" y="220" fill="#8fb4e3" font-size="14">Ubuntu 22.04  |  web tier</text>
+  <rect x="85" y="255" width="265" height="34" rx="17" fill="#c792ff" fill-opacity="0.18" stroke="#c792ff"/>
+  <circle cx="106" cy="272" r="7" fill="#c792ff" class="pulse"/>
+  <text x="122" y="277" fill="#e6d4ff" font-size="14" font-weight="bold">System-assigned identity: ON</text>
+  <text x="85" y="320" fill="#9fd8ff" font-size="13" font-family="Consolas, monospace">$ az login --identity</text>
+  <text x="85" y="342" fill="#9fd8ff" font-size="13" font-family="Consolas, monospace">$ az keyvault secret show ...</text>
+  <text x="85" y="364" fill="#9fd8ff" font-size="13" font-family="Consolas, monospace">$ sqlcmd ... "SELECT @@VERSION"</text>
+
+  <!-- vm-db-01 decommissioned -->
+  <g opacity="0.55">
+    <rect x="60" y="420" width="310" height="190" rx="14" fill="#1a1f2e" stroke="#ff5f6d" stroke-width="2" stroke-dasharray="8 6"/>
+    <g transform="translate(85,450)">
+      <ellipse cx="27" cy="8" rx="27" ry="8" fill="#6b7280"/><rect y="8" width="54" height="40" fill="#6b7280"/><ellipse cx="27" cy="48" rx="27" ry="8" fill="#4b5563"/>
+    </g>
+    <text x="160" y="470" fill="#d1d5db" font-size="22" font-weight="bold">vm-db-01</text>
+    <text x="160" y="495" fill="#9ca3af" font-size="14">SQL on a VM (IaaS)</text>
+    <text x="85" y="540" fill="#9ca3af" font-size="13">You patch it. You back it up.</text>
+    <text x="85" y="560" fill="#9ca3af" font-size="13">You keep it running.</text>
+  </g>
+  <line x1="90" y1="440" x2="340" y2="590" stroke="#ff5f6d" stroke-width="5" stroke-linecap="round"/>
+  <line x1="340" y1="440" x2="90" y2="590" stroke="#ff5f6d" stroke-width="5" stroke-linecap="round"/>
+  <rect x="215" y="578" width="140" height="26" rx="13" fill="#ff5f6d"/>
+  <text x="285" y="596" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">DECOMMISSIONED</text>
+
+  <!-- Entra ID (center top) -->
+  <rect x="470" y="130" width="260" height="96" rx="14" fill="url(#card)" stroke="#c792ff" stroke-width="2"/>
+  <polygon points="515,150 540,195 490,195" fill="none" stroke="#c792ff" stroke-width="4"/>
+  <circle cx="515" cy="180" r="6" fill="#c792ff"/>
+  <text x="560" y="172" fill="#fff" font-size="18" font-weight="bold">Microsoft Entra ID</text>
+  <text x="560" y="196" fill="#cbb2f5" font-size="13">issues the VM's token</text>
+
+  <!-- Right resource group -->
+  <rect x="800" y="110" width="370" height="600" rx="16" fill="none" stroke="#3fd68a" stroke-opacity="0.5" stroke-dasharray="6 6"/>
+  <rect x="820" y="98" width="270" height="26" rx="13" fill="#0b2a55" stroke="#3fd68a" stroke-opacity="0.6"/>
+  <text x="955" y="116" fill="#3fd68a" font-size="14" font-weight="bold" text-anchor="middle">rg-lab03-giovanni  |  West US 3</text>
+
+  <!-- Key Vault -->
+  <rect x="830" y="150" width="310" height="170" rx="14" fill="url(#card)" stroke="#ffa53d" stroke-width="2"/>
+  <g transform="translate(855,175)" fill="#ffa53d">
+    <circle cx="16" cy="18" r="16"/><circle cx="16" cy="18" r="6" fill="#0d1f3d"/>
+    <rect x="28" y="14" width="30" height="8" rx="2"/><rect x="46" y="22" width="6" height="10"/><rect x="54" y="22" width="4" height="7"/>
+  </g>
+  <text x="930" y="195" fill="#fff" font-size="21" font-weight="bold">kv-lab03-giovanni</text>
+  <text x="930" y="218" fill="#ffd199" font-size="14">Azure Key Vault  |  RBAC</text>
+  <rect x="855" y="240" width="260" height="30" rx="8" fill="#ffa53d" fill-opacity="0.15" stroke="#ffa53d" stroke-opacity="0.6"/>
+  <text x="870" y="260" fill="#ffd199" font-size="14" font-family="Consolas, monospace">secret: SqlAdminPassword</text>
+  <text x="855" y="298" fill="#ffd199" font-size="13">VM role: Key Vault Secrets User (read-only)</text>
+
+  <!-- SQL -->
+  <rect x="830" y="350" width="310" height="200" rx="14" fill="url(#card)" stroke="#3fd68a" stroke-width="2"/>
+  <g transform="translate(855,375)">
+    <ellipse cx="27" cy="8" rx="27" ry="8" fill="#3fd68a"/><rect y="8" width="54" height="40" fill="#2bb673"/><ellipse cx="27" cy="48" rx="27" ry="8" fill="#1f8f59"/>
+    <ellipse cx="27" cy="8" rx="27" ry="8" fill="#6ff0b0"/>
+  </g>
+  <text x="930" y="393" fill="#fff" font-size="21" font-weight="bold">sql-server-giovanni</text>
+  <text x="930" y="416" fill="#a6f0c8" font-size="14">Azure SQL  |  PaaS</text>
+  <rect x="855" y="440" width="260" height="30" rx="8" fill="#3fd68a" fill-opacity="0.15" stroke="#3fd68a" stroke-opacity="0.6"/>
+  <text x="870" y="460" fill="#a6f0c8" font-size="14" font-family="Consolas, monospace">db: sqldb-app (serverless)</text>
+  <text x="855" y="494" fill="#a6f0c8" font-size="13">Firewall: Selected networks</text>
+  <text x="855" y="514" fill="#a6f0c8" font-size="13">+ client IP  + Azure services  |  TLS 1.2</text>
+  <text x="855" y="536" fill="#a6f0c8" font-size="13">Patching and backups: Microsoft</text>
+
+  <!-- Monitor -->
+  <rect x="830" y="590" width="310" height="100" rx="14" fill="url(#card)" stroke="#4cc2ff" stroke-width="2"/>
+  <polyline points="855,660 875,655 895,658 915,630 930,660 955,657 975,642 995,660" fill="none" stroke="#ff4fa3" stroke-width="3"/>
+  <text x="1005" y="630" fill="#fff" font-size="17" font-weight="bold">Azure Monitor</text>
+  <text x="1005" y="652" fill="#9fd8ff" font-size="13">CPU %</text>
+  <text x="1005" y="672" fill="#9fd8ff" font-size="12">Successful Connections</text>
+
+  <!-- Flows -->
+  <path id="p1" d="M370,190 C420,190 420,178 470,178" fill="none" stroke="#c792ff" stroke-width="3" class="flow" marker-end="url(#arP)"/>
+  <path id="p2" d="M370,240 C600,240 600,235 830,235" fill="none" stroke="#ffa53d" stroke-width="3" class="flow" marker-end="url(#arO)"/>
+  <path id="p3" d="M370,330 C600,330 600,455 830,455" fill="none" stroke="#3fd68a" stroke-width="3" class="flow" marker-end="url(#arG)"/>
+  <path id="p4" d="M985,550 L985,588" fill="none" stroke="#4cc2ff" stroke-width="3" class="flow" marker-end="url(#arB)"/>
+
+  <circle r="7" fill="#e6d4ff" filter="url(#glow)"><animateMotion dur="2s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+  <circle r="7" fill="#ffd199" filter="url(#glow)"><animateMotion dur="2.6s" begin="0.6s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
+  <circle r="7" fill="#a6f0c8" filter="url(#glow)"><animateMotion dur="2.8s" begin="1.2s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle>
+  <circle r="6" fill="#9fd8ff" filter="url(#glow)"><animateMotion dur="1.4s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle>
+
+  <!-- Step labels -->
+  <g font-size="14" font-weight="bold">
+    <circle cx="440" cy="130" r="15" fill="#c792ff"/><text x="440" y="135" fill="#07122b" text-anchor="middle">1</text>
+    <text x="395" y="105" fill="#e6d4ff" font-size="13">Get token (no password)</text>
+
+    <rect x="485" y="252" width="230" height="44" rx="10" fill="#07122b" stroke="#ffa53d"/>
+    <circle cx="507" cy="274" r="15" fill="#ffa53d"/><text x="507" y="279" fill="#07122b" text-anchor="middle">2</text>
+    <text x="530" y="270" fill="#ffd199">Read secret with token</text>
+    <text x="530" y="288" fill="#ffd199" font-size="12" font-weight="normal">RBAC checks Secrets User</text>
+
+    <rect x="485" y="372" width="230" height="44" rx="10" fill="#07122b" stroke="#3fd68a"/>
+    <circle cx="507" cy="394" r="15" fill="#3fd68a"/><text x="507" y="399" fill="#07122b" text-anchor="middle">3</text>
+    <text x="530" y="390" fill="#a6f0c8">Connect with secret</text>
+    <text x="530" y="408" fill="#a6f0c8" font-size="12" font-weight="normal">TDS 1433 over TLS 1.2</text>
+
+    <circle cx="1025" cy="570" r="13" fill="#4cc2ff"/><text x="1025" y="575" fill="#07122b" text-anchor="middle">4</text>
+    <text x="1045" y="575" fill="#9fd8ff" font-size="13">Metrics</text>
+  </g>
+
+  <!-- Footer result -->
+  <rect x="430" y="470" width="340" height="170" rx="14" fill="#07122b" stroke="#ffffff" stroke-opacity="0.25"/>
+  <text x="600" y="500" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">End-to-end test result</text>
+  <text x="600" y="530" fill="#3fd68a" font-size="14" font-family="Consolas, monospace" text-anchor="middle">Microsoft SQL Azure (RTM)</text>
+  <text x="600" y="550" fill="#3fd68a" font-size="14" font-family="Consolas, monospace" text-anchor="middle">12.0.2000.8   (1 rows affected)</text>
+  <line x1="460" y1="570" x2="740" y2="570" stroke="#ffffff" stroke-opacity="0.15"/>
+  <text x="600" y="594" fill="#cfe0f7" font-size="13" text-anchor="middle">No password in code, config, or on disk</text>
+  <text x="600" y="616" fill="#cfe0f7" font-size="13" text-anchor="middle">Least privilege  |  secret cleared with unset</text>
+</svg>
