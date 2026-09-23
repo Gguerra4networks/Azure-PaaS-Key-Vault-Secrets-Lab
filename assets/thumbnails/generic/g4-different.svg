@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#03140a"/><stop offset="1" stop-color="#0f4a2a"/></linearGradient>
+  </defs>
+  <rect width="1200" height="628" fill="url(#bg)"/>
+  <circle cx="910" cy="314" r="190" fill="none" stroke="#2ea043" stroke-opacity="0.25" stroke-width="40"/>
+  <path d="M 780 260 A 150 150 0 1 1 790 390" fill="none" stroke="#7ee787" stroke-width="26" stroke-linecap="round"/>
+  <polygon points="735,225 830,230 775,305" fill="#7ee787"/>
+  <path d="M860 318 L895 353 L965 280" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="70" y="115" fill="#7ee787" font-size="24" font-weight="bold" letter-spacing="4">WHAT I'D DO DIFFERENTLY</text>
+  <text x="70" y="225" fill="#fff" font-size="78" font-weight="bold">Check it</text>
+  <text x="70" y="315" fill="#fff" font-size="78" font-weight="bold">before you</text>
+  <text x="70" y="405" fill="#7ee787" font-size="78" font-weight="bold">need it.</text>
+  <text x="70" y="470" fill="#b7e4c4" font-size="26">Green deployment does not mean it connects.</text>
+  <text x="70" y="560" fill="#8fcfa1" font-size="22" font-weight="bold">CEA  LAB 03</text>
+</svg>

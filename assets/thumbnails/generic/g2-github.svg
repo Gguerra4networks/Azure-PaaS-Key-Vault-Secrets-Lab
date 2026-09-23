@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#11301c"/></linearGradient>
+  </defs>
+  <rect width="1200" height="628" fill="url(#bg)"/>
+  <g fill="#3fb950" fill-opacity="0.08" font-family="Consolas, monospace" font-size="20">
+    <text x="640" y="60">git add . &amp;&amp; git commit -m "lab 03"</text>
+    <text x="700" y="590">git push origin main</text>
+  </g>
+  <text x="820" y="400" fill="#3fb950" font-size="300" font-weight="bold" text-anchor="middle" font-family="Consolas, monospace">&lt;/&gt;</text>
+  <text x="70" y="115" fill="#3fb950" font-size="24" font-weight="bold" letter-spacing="4">OPEN SOURCE LAB</text>
+  <text x="70" y="215" fill="#fff" font-size="76" font-weight="bold">Clone it.</text>
+  <text x="70" y="300" fill="#fff" font-size="76" font-weight="bold">Build it.</text>
+  <text x="70" y="385" fill="#3fb950" font-size="76" font-weight="bold">Own it.</text>
+  <text x="70" y="450" fill="#9da7b3" font-size="26">Full SOP  |  CLI for every step  |  Real errors, real fixes</text>
+  <rect x="70" y="500" rx="25" width="330" height="56" fill="#238636"/>
+  <polygon points="112,513 116,523 126,523 118,530 121,540 112,534 103,540 106,530 98,523 108,523" fill="#fff"/><text x="255" y="537" fill="#fff" font-size="24" font-weight="bold" text-anchor="middle">Star the repo</text>
+</svg>

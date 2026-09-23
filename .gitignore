@@ -1,0 +1,46 @@
+# ---- Azure credentials ----
+.azure/
+accessTokens.json
+azureProfile.json
+*.publishsettings
+
+# ---- SSH keys ----
+*.pem
+*.key
+*.ppk
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# ---- Secret variable files ----
+.env
+.env.*
+secrets.ps1
+credentials.json
+*.secret
+
+# ---- Terraform state and vars ----
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+crash.log
+
+# ---- VS Code (keep extensions.json) ----
+.vscode/*
+!.vscode/extensions.json
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs ----
+*.log
+
+# ---- Backups ----
+*.bak
+*.tmp
+*~

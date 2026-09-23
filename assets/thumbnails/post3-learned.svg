@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2d0b59"/><stop offset="1" stop-color="#5b2a9e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="628" fill="url(#bg)"/>
+  <rect x="60" y="50" rx="10" width="1080" height="150" fill="#12062a" stroke="#8a63d2"/>
+  <g font-family="Consolas, monospace" font-size="22">
+    <text x="90" y="100" fill="#ff7b72">Error 40613: Database 'sqldb-app' on server</text>
+    <text x="90" y="132" fill="#ff7b72">'sql-server-giovanni' is not currently available.</text>
+    <text x="90" y="172" fill="#d2a8ff">retry 60s later -&gt; Login failed for user 'sqladmin'</text>
+  </g>
+  <text x="60" y="305" fill="#fff" font-size="54" font-weight="bold">"Unavailable" was not the problem.</text>
+  <text x="60" y="380" fill="#fff" font-size="54" font-weight="bold">Serverless SQL was waking up.</text>
+  <text x="60" y="455" fill="#ffb86b" font-size="54" font-weight="bold">My password was the real issue.</text>
+  <text x="60" y="560" fill="#d9c8ff" font-size="22" font-weight="bold">CEA LAB 03  |  ONE THING I LEARNED</text>
+</svg>

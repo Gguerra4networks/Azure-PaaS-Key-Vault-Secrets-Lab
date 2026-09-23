@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1f44"/><stop offset="1" stop-color="#0078d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#bg)"/>
+  <rect x="50" y="42" rx="6" width="190" height="34" fill="#ff8c00"/>
+  <text x="145" y="65" fill="#fff" font-size="17" font-weight="bold" text-anchor="middle">CEA  |  LAB 03</text>
+  <text x="50" y="140" fill="#fff" font-size="50" font-weight="bold">Modernizing to PaaS</text>
+  <text x="50" y="200" fill="#fff" font-size="50" font-weight="bold">&amp; Securing Secrets</text>
+  <text x="50" y="245" fill="#cfe6ff" font-size="20">VM database out. Azure SQL in. Zero passwords on the server.</text>
+  <g font-size="15" font-weight="bold" fill="#0a1f44">
+    <rect x="50" y="285" rx="15" width="110" height="30" fill="#cfe6ff"/><text x="105" y="305" text-anchor="middle">Azure SQL</text>
+    <rect x="170" y="285" rx="15" width="110" height="30" fill="#cfe6ff"/><text x="225" y="305" text-anchor="middle">Key Vault</text>
+    <rect x="290" y="285" rx="15" width="165" height="30" fill="#cfe6ff"/><text x="372" y="305" text-anchor="middle">Managed Identity</text>
+    <rect x="465" y="285" rx="15" width="80" height="30" fill="#cfe6ff"/><text x="505" y="305" text-anchor="middle">RBAC</text>
+    <rect x="555" y="285" rx="15" width="130" height="30" fill="#cfe6ff"/><text x="620" y="305" text-anchor="middle">Azure Monitor</text>
+  </g>
+  <rect x="730" y="70" rx="10" width="430" height="260" fill="#0d1117" stroke="#30363d"/>
+  <rect x="730" y="70" rx="10" width="430" height="32" fill="#161b22"/>
+  <circle cx="752" cy="86" r="6" fill="#ff5f56"/><circle cx="772" cy="86" r="6" fill="#ffbd2e"/><circle cx="792" cy="86" r="6" fill="#27c93f"/>
+  <text x="945" y="91" fill="#8b949e" font-size="13" text-anchor="middle">azureuser@vm-web-01</text>
+  <g font-family="Consolas, monospace" font-size="15">
+    <text x="750" y="135" fill="#3fb950">$ az login --identity</text>
+    <text x="750" y="160" fill="#8b949e">  "name": "Azure subscription 1"</text>
+    <text x="750" y="195" fill="#3fb950">$ az keyvault secret show \</text>
+    <text x="750" y="217" fill="#3fb950">    --name SqlAdminPassword ...</text>
+    <text x="750" y="242" fill="#8b949e">Retrieved a password NN chars long</text>
+    <text x="750" y="277" fill="#3fb950">$ sqlcmd -S sql-server... -C</text>
+    <text x="750" y="302" fill="#58a6ff">Microsoft SQL Azure (RTM) 12.0</text>
+  </g>
+</svg>

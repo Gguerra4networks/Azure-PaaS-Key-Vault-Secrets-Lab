@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" font-family="Arial, sans-serif">
+  <defs>
+    <radialGradient id="bg" cx="0.7" cy="0.5" r="0.9"><stop offset="0" stop-color="#0b5cad"/><stop offset="1" stop-color="#050b1f"/></radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ff8c00" stop-opacity="0.55"/><stop offset="1" stop-color="#ff8c00" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="628" fill="url(#bg)"/>
+  <g stroke="#1e6fd9" stroke-opacity="0.25">
+    <line x1="0" y1="157" x2="1200" y2="157"/><line x1="0" y1="314" x2="1200" y2="314"/><line x1="0" y1="471" x2="1200" y2="471"/>
+    <line x1="300" y1="0" x2="300" y2="628"/><line x1="600" y1="0" x2="600" y2="628"/><line x1="900" y1="0" x2="900" y2="628"/>
+  </g>
+  <circle cx="900" cy="300" r="230" fill="url(#glow)"/>
+  <circle cx="900" cy="300" r="120" fill="#ff8c00"/>
+  <polygon points="865,240 865,360 965,300" fill="#fff"/>
+  <text x="70" y="120" fill="#ff8c00" font-size="24" font-weight="bold" letter-spacing="4">NEW LAB WALKTHROUGH</text>
+  <text x="70" y="225" fill="#fff" font-size="84" font-weight="bold">Zero</text>
+  <text x="70" y="315" fill="#fff" font-size="84" font-weight="bold">Passwords.</text>
+  <text x="70" y="405" fill="#6cb8ff" font-size="84" font-weight="bold">Full Access.</text>
+  <text x="70" y="470" fill="#c9dcf5" font-size="26">Managed Identity  +  Key Vault  +  Azure SQL</text>
+  <rect x="70" y="515" rx="8" width="260" height="50" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.4"/>
+  <text x="200" y="548" fill="#fff" font-size="22" font-weight="bold" text-anchor="middle">CEA  LAB 03</text>
+</svg>
